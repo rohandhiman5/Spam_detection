@@ -1,39 +1,28 @@
-{% load static%}
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Message Input Form</title>
    
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
-
 </head>
 <body>
-     <!-- <h1>hello world</h1> -->
-
-     <div class="box">
-        <h2>
-            Enter input
-
-        </h2>
-
-        <form action="{%url 'result' %}">
-            {% csrf_token %}
-
-            <label for="email" ></label>
-            <input type="textarea" placeholder="enter some text" id="email"name="email">
-
-        </form>
-
-
-
-
-
-     </div>
-
-
-
-
+    <div class="container">
+        <div class="box">
+            <h2>Enter your message</h2>
+            <form action="{% url 'result' %}" method="POST">
+                {% csrf_token %}
+                
+                <div class="input-group">
+                    <label for="message">Your Message:</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Enter your message" required></textarea>
+                </div>
+                
+                <button type="submit" class="btn-submit">Submit</button>
+            </form>
+        </div>
+    </div>
 </body>
 </html>

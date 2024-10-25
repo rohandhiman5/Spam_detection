@@ -1,68 +1,107 @@
-body{
-  background-color: rgb(131, 162, 181);
+/* style.css */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #00c6ff, #0072ff);
+  margin: 0;
+  padding: 0;
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 100vh;
+  color: #fff;
 }
 
-.box{
-  background: rgb(2,0,36);
-background: linear-gradient(90deg, rgb(86, 80, 192) 0%, rgba(103,21,207,0.6072480017397583) 32%, rgba(0,212,255,1) 100%);
-  width: 50%;
-  height: 400px;
-  margin-top:20vh;
-  border-radius:30px;
-
-
-
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
 }
 
-.box h2{
-  color:rgb(31, 29, 29);
+.box {
+  background-color: #2c2a4a;
+  padding: 40px;
+  border-radius: 15px;
+  width: 400px;
   text-align: center;
-  font-size:3em;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
-.box input[type=textarea]{
-  border: 2px solid #6316ac;
-  border-radius: 10px;
-  background-color: rgb(183, 183, 199);
-  padding: 100px 21px;
-  width: 86%;          /* Keep the width fixed */
-  height: 150px;       /* Set height for multiline input */
-  margin: 10px 37px;
+h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #f0f0f0;
+}
+
+.input-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 14px;
+  color: #ddd;
+}
+
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
   font-size: 16px;
-  box-sizing: border-box;
-  
-  resize: none;        /* Disable resizing of the textarea */
-  overflow-y: auto;    /* Allow vertical scrolling if text overflows */
-  overflow-x: hidden;  /* Prevent horizontal scrolling */
-  word-wrap: break-word; /* Break long words at the boundary */
+  background-color: #fff;
+  color: #333;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 8px;
+  resize: none;
 }
 
-.box input[type=textarea]:hover{
-  border:2px solid rgb(107, 10, 10);
-  border-radius: 10px;
-  cursor:text;
+textarea:focus {
+  outline: none;
+  border-color: #00c6ff;
+  box-shadow: 0 0 8px rgba(0, 198, 255, 0.7);
 }
 
-::placeholder{
-  text-align: center;
-  font-size:1.5em;
-  color:rgb(108, 98, 165);
+.btn-submit {
+  background-color: #5e174c;
+  color: #fff;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  width: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
-
+.btn-submit:hover {
+  background-color: #3a1033;
+}
 
 
 .output {
-  color: rgb(181, 175, 111);
+  background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+  color: #fff;
+  padding: 20px;
+  margin: 20px auto;
+  border-radius: 12px;
   text-align: center;
-  font-size: 2em;
-  padding: 40px;
-  margin: 20px 0;
-  background-color: rgb(215, 198, 198); /* Light green background */
-  border-radius: 5px; /* Rounded corners */
-  font-weight: bold; /* Makes the text bold */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  font-size: 1.5rem;
+  font-weight: bold;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  max-width: 600px;
+}
+
+.output::before {
+  content: "Result: ";
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.output {
+  word-wrap: break-word;  /* Ensures long text wraps inside the box */
 }

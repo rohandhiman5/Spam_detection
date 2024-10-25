@@ -9,7 +9,7 @@ import pickle
 
 # Load model and vectorizer once, globally
 model = pickle.load(open("static/ML/NB.pkl", "rb"))
-vectorizer = pickle.load(open("static/ML/Vectorizer_logistic_regression.pkl", "rb"), encoding='latin1')  # Added encoding
+vectorizer = pickle.load(open("static/ML/Vectorizer_logistic_regression.pkl", "rb"))  # Added encoding
 
 
 def index(request):
@@ -28,7 +28,7 @@ def getPrediction(mail):
 
 
 def result(request):
-    input=request.GET.get('email')
+    input=request.POST.get('message')
 
     prediction=getPrediction(input)
 
