@@ -1,41 +1,69 @@
-{% load static%}
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-   
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+    <style>
+        /* Embedded CSS */
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #00c6ff, #d1d6db);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #fff;
+        }
+
+        .box {
+            background-color: #2c2a4a;
+            padding: 40px;
+            border-radius: 15px;
+            width: 400px;
+            text-align: center;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #f0f0f0;
+        }
+
+        .output {
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            color: #fff;
+            padding: 20px;
+            margin: 20px auto;
+            border-radius: 12px;
+            text-align: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            max-width: 600px;
+            word-wrap: break-word;  /* Ensures long text wraps inside the box */
+        }
+
+        .output::before {
+            content: "Result: ";
+            font-size: 1.3rem;
+            font-weight: 600;
+        }
+    </style>
 
 </head>
 <body>
-     <!-- <h1>hello world</h1> -->
-
-     <div class="box">
-        <h2>
-           The output is
-           
-
-        </h2>
-
+    <div class="box">
+        <h2>The output is</h2>
         <div class="output">
-
-            {{output}}
-
+            {{ output }}
         </div>
-
-
-        
-
-
-
-
-
-     </div>
-
-
-
-
+    </div>
 </body>
 </html>
